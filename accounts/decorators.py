@@ -42,4 +42,7 @@ def admin_only(view_func):
         if group == 'admin':
             return view_func(request, *args, **kwargs)
 
+        else:
+            return redirect ('loginpage')
+
     return wrapper_function
